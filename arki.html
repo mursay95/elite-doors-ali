@@ -135,7 +135,12 @@
             .contact-info { text-align: center; }
             .contact-phone { white-space: nowrap; }
             .top-nav { gap: 15px; overflow-x: auto; justify-content: flex-start; white-space: nowrap; }
-            .door-grid { justify-content: center; }
+            .door-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
         }
     </style>
 </head>
