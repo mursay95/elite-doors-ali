@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Входные двери на заказ</title>
     <style>
+        body {
+            background-color: #f7f7f7;
+            color: #333333;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
         /* Красивая шапка сайта */
         .header-top {
             background-color: #ffffff;
@@ -75,14 +83,8 @@
             background-color: #436642;
             color: #ffffff;
         }
-        body {
-            background-color: #f7f7f7;
-            color: #333333;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
 
+        /* Меню */
         .top-nav {
             background-color: #436642;
             padding: 15px 20px;
@@ -121,7 +123,7 @@
             justify-content: flex-start;
         }
 
-        /* Карточка товара как в инстаграме */
+        /* Карточка товара */
         .product-card {
             background: #ffffff;
             border: 1px solid #e2e2e2;
@@ -160,7 +162,7 @@
         .product-card img {
             width: 100%;
             height: 280px;
-            object-fit: cover; /* Картинка заполняет блок аккуратно без искажений */
+            object-fit: cover;
             border-radius: 6px;
             margin-bottom: 15px;
             background-color: #fafafa;
@@ -177,7 +179,7 @@
 
         .whatsapp-btn {
             background-color: #436642;
-            color: white;
+            color: white !important;
             text-align: center;
             text-decoration: none;
             padding: 11px;
@@ -186,26 +188,41 @@
             font-size: 14px;
             transition: 0.2s;
             margin-top: auto;
+            display: block;
         }
+        .whatsapp-btn:hover { background-color: #2f4a2e; }
 
-     @media (max-width: 768px) {
-    .door-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 10px;
-    }
-    .product-card {
-        width: 100% !important;
-        box-sizing: border-box;
-    }
-}
+        /* Полная мобильная адаптивность */
+        @media (max-width: 768px) {
+            .header-top { flex-direction: column; gap: 15px; text-align: center; padding: 15px; }
+            .contacts-area { flex-direction: column; gap: 10px; }
+            .contact-info { text-align: center; }
+            .contact-phone { white-space: nowrap; }
+            
+            /* Горизонтальный скролл для меню, чтобы кнопки не слипались */
+            .top-nav { gap: 15px; overflow-x: auto; justify-content: flex-start; white-space: nowrap; padding: 12px 15px; }
+            
+            .door-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 5px;
+            }
+            .product-card {
+                width: 100% !important;
+                box-sizing: border-box;
+                padding: 10px;
+            }
+            .product-card img {
+                height: 200px; /* Слегка уменьшаем высоту фото на мобилках, чтобы всё влезало */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header-top">
         <div class="logo-area">
-            <h1 class="logo-title">Элит Двери</h2>
+            <h1 class="logo-title">Элит Двери</h1>
             <span class="logo-subtitle">Производство и реставрация дверей на заказ</span>
         </div>
         
@@ -235,179 +252,143 @@
                 <div class="badge badge-hit">Хит</div>
                 <img src="vhod7.jpg" alt="Входная дверь 1">
                 <p class="product-title">Входная дверь массив</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%961" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%961" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-new">Новинка</div>
                 <img src="vhod8.jpg" alt="Входная дверь 2">
                 <p class="product-title">Утепленная дверь с терморазрывом</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%962" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%962" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-hit">Хит</div>
                 <img src="vhod9.jpg" alt="Входная дверь 3">
                 <p class="product-title">Входная дверь люкс</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%963" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%963" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-hit">Хит</div>
                 <img src="vhod10.jpg" alt="Входная дверь 4">
                 <p class="product-title">Входная дверь премиум</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%964" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%964" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
+
             <div class="product-card">
                 <div class="badge badge-new">Новинка</div>
                 <img src="vhod11.jpg" alt="Входная дверь 5">
                 <p class="product-title">Входная дверь элит</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-hit">Хит</div>
                 <img src="vhod12.jpg" alt="Входная дверь 6">
                 <p class="product-title">Входная дверь классика</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
+
             <div class="product-card">
                 <div class="badge badge-new">Новинка</div>
-                <img src="vhod13.jpg" alt="Входная дверь 5">
+                <img src="vhod13.jpg" alt="Входная дверь 7">
                 <p class="product-title">Входная дверь элит</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-hit">Хит</div>
-                <img src="vhod1.jpg" alt="Входная дверь 6">
+                <img src="vhod1.jpg" alt="Входная дверь 8">
                 <p class="product-title">Входная дверь классика</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
+
             <div class="product-card">
                 <div class="badge badge-new">Новинка</div>
-                <img src="vhod2.jpg" alt="Входная дверь 5">
+                <img src="vhod2.jpg" alt="Входная дверь 9">
                 <p class="product-title">Входная дверь элит</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-hit">Хит</div>
-                <img src="vhod3.jpg" alt="Входная дверь 6">
+                <img src="vhod3.jpg" alt="Входная дверь 10">
                 <p class="product-title">Входная дверь классика</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
+
             <div class="product-card">
                 <div class="badge badge-new">Новинка</div>
-                <img src="vhod4.jpg" alt="Входная дверь 5">
+                <img src="vhod4.jpg" alt="Входная дверь 11">
                 <p class="product-title">Входная дверь элит</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-hit">Хит</div>
-                <img src="vhod5.jpg" alt="Входная дверь 6">
+                <img src="vhod5.jpg" alt="Входная дверь 12">
                 <p class="product-title">Входная дверь классика</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
-            </div>
-            <div class="product-card">
-                <div class="badge badge-new">Новинка</div>
-                <img src="vhod6.jpg" alt="Входная дверь 5">
-                <p class="product-title">Входная дверь элит</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
-             <div class="product-card">
+            <div class="product-card">
                 <div class="badge badge-new">Новинка</div>
-                <img src="vhod14.jpg" alt="Входная дверь 5">
+                <img src="vhod6.jpg" alt="Входная дверь 13">
                 <p class="product-title">Входная дверь элит</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
+            </div>
+
+            <div class="product-card">
+                <div class="badge badge-new">Новинка</div>
+                <img src="vhod14.jpg" alt="Входная дверь 14">
+                <p class="product-title">Входная дверь элит</p>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-hit">Хит</div>
-                <img src="vhod15.jpg" alt="Входная дверь 6">
+                <img src="vhod15.jpg" alt="Входная дверь 15">
                 <p class="product-title">Входная дверь классика</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
+
             <div class="product-card">
                 <div class="badge badge-new">Новинка</div>
-                <img src="vhod16.jpg" alt="Входная дверь 5">
+                <img src="vhod16.jpg" alt="Входная дверь 16">
                 <p class="product-title">Входная дверь элит</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-hit">Хит</div>
-                <img src="vhod17.jpg" alt="Входная дверь 6">
+                <img src="vhod17.jpg" alt="Входная дверь 17">
                 <p class="product-title">Входная дверь классика</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
-            </div>
-            <div class="product-card">
-                <div class="badge badge-new">Новинка</div>
-                <img src="vhod18.jpg" alt="Входная дверь 5">
-                <p class="product-title">Входная дверь элит</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
-             <div class="product-card">
+            <div class="product-card">
                 <div class="badge badge-new">Новинка</div>
-                <img src="vhod19.jpg" alt="Входная дверь 5">
+                <img src="vhod18.jpg" alt="Входная дверь 18">
                 <p class="product-title">Входная дверь элит</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
+            </div>
+
+            <div class="product-card">
+                <div class="badge badge-new">Новинка</div>
+                <img src="vhod19.jpg" alt="Входная дверь 19">
+                <p class="product-title">Входная дверь элит</p>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%965" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
 
             <div class="product-card">
                 <div class="badge badge-hit">Хит</div>
-                <img src="vhod20.jpg" alt="Входная дверь 6">
+                <img src="vhod20.jpg" alt="Входная дверь 20">
                 <p class="product-title">Входная дверь классика</p>
-                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">
-                    Быстрый заказ
-                </a>
+                <a href="https://wa.me/79286494877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%E2%84%966" target="_blank" class="whatsapp-btn">Быстрый заказ</a>
             </div>
-            
-            
 
         </div>
     </div>
-
 </body>
 </html>
